@@ -2,6 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { FC } from 'react';
 
 import cls from './PageLoader.module.scss';
+import { Button } from '../Button/Button';
 
 interface PageLoaderProps {
     className?: string;
@@ -12,7 +13,7 @@ export const PageLoader: FC<PageLoaderProps> = (props) => {
 
     return (
         <div className={classNames(cls.PageLoader, {}, [className])}>
-            {/* asdfa */}
+            <Button />
         </div>
     );
 };
