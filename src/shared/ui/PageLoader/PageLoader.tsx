@@ -12,7 +12,7 @@ export const PageLoader: FC<PageLoaderProps> = (props) => {
 
     return (
         <div className={classNames(cls.PageLoader, {}, [className])}>
-            
+            {/* asdfa */}
         </div>
     );
 };
