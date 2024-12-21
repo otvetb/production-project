@@ -1,8 +1,8 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { FC } from 'react';
+import L123 from 'shared/ui/Loader/L123';
 import Loader from '../Loader/Loader';
 import cls from './PageLoader.module.scss';
-import L123 from '../Loader/L123';
 
 interface PageLoaderProps {
     className?: string;
