@@ -2,20 +2,20 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import 'app/styles/index.scss';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import Loaders from './Loaders';
+import Loader from './Loader';
 
 export default {
     title: 'Shared/Loader',
-    component: Loaders,
+    component: Loader,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
     args: {
         to: '/',
     },
-} as ComponentMeta<typeof Loaders>;
+} as ComponentMeta<typeof Loader>;
 
-const Template: ComponentStory<typeof Loaders> = (args) => <Loaders {...args} />;
+const Template: ComponentStory<typeof Loader> = (args) => <Loader {...args} />;
 
 export const Light = Template.bind({});
 Light.args = {};
