@@ -1,12 +1,12 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { FC } from 'react';
-import './Loader.scss';
+import './Loaders.scss';
 
 interface LoaderProps {
     className?: string;
 }
 
-export const Loader: FC<LoaderProps> = (props) => {
+export const Loaders: FC<LoaderProps> = (props) => {
     const { className } = props;
 
     return (
@@ -18,4 +18,4 @@ export const Loader: FC<LoaderProps> = (props) => {
         </div>
     );
 };
-export default Loader;
+export default Loaders;
