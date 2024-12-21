@@ -13,7 +13,7 @@ export const PageLoader: FC<PageLoaderProps> = (props) => {
 
     return (
         <div className={classNames(cls.PageLoader, {}, [className])}>
-            <L123 />
+            
         </div>
     );
 };
