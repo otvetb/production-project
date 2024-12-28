@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { Button, ThemeButton } from './Button';
+import { Button, ButtonTheme } from './Button';
 
 describe('button', () => {
     test('default test', () => {
@@ -8,7 +8,7 @@ describe('button', () => {
     });
 
     test('clear button', () => {
-        render(<Button theme={ThemeButton.CLEAR}>TEXT</Button>);
+        render(<Button theme={ButtonTheme.CLEAR}>TEXT</Button>);
         expect(screen.getByText('TEXT')).toHaveClass('clear');
         screen.debug();
     });
