@@ -1,6 +1,6 @@
 import path from 'path';
 import { WebpackConfiguration } from 'webpack-dev-server';
-import { RuleSetRule } from 'webpack';
+import { DefinePlugin, RuleSetRule } from 'webpack';
 import { buildCssLoaders } from '../build/loaders/buildCssLoaders';
 import { BuildPaths } from '../build/types/config';
 
@@ -29,6 +29,10 @@ export default ({ config }: {config: WebpackConfiguration}) => {
     });
 
     config.module.rules.push(buildCssLoaders(true));
+
+    config.plugins.push(new DefinePlugin({
+        __IS_DEV__: true,
+    }));
 
     return config;
 };

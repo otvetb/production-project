@@ -11,5 +11,8 @@
   "Короткий язык": "En",
   "Войти": "Sign in",
   "Логин": "Login",
-  "Пароль": "Password"
+  "Пароль": "Password",
+  "Форма авторизации": "Authorization form",
+  "Вы ввели неверный логин или пароль": "Invalid login or password",
+  "Выйти": "Sign out"
 }
