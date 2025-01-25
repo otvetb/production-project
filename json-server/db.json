@@ -25,6 +25,15 @@
         "password": "123"
       }
     ],
-    "profile": { "name": "typicode" }
+    "profile": { 
+      "firstname": "Typi",
+      "lastname": "Code",
+      "age": 22,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "typicode",
+      "avatar": "https://avatars.githubusercontent.com/u/5502029?v=4"
+  }
   }
   
