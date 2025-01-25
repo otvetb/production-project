@@ -12,7 +12,7 @@ const reducers: ReducersList = {
     profile: profileReducer,
 };
 
-const ProfilePage = (props: ProfilePageProps) => {
+const ProfilePage = memo((props: ProfilePageProps) => {
     const { className } = props;
     const { t } = useTranslation('profile');
     return (
@@ -22,6 +22,6 @@ const ProfilePage = (props: ProfilePageProps) => {
             </div>
         </DynamicModuleLoader>
     );
-};
+});
 
 export default ProfilePage;
