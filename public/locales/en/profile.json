@@ -1,4 +1,18 @@
 {
-    "Страница профиля": "Profile page"
+    "Страница профиля": "Profile page",
+    "Профиль": "Profile",
+    "Редактировать": "Edit",
+    "Ваше имя": "Your name",
+    "Ваша фамилия": "Your surname",
+    "Произошла ошибка при загрузке профиля": "An error occurred while loading the profile",
+    "Попробоуйте обновить страницу": "Try refreshing the page",
+    "Отменить": "Cancel",
+    "Сохранить": "Save",
+    "Ваш возраст": "Your age",
+    "Город": "City",
+    "Ваш никнейм": "Your nickname",
+    "Ссылка на аватар": "Avatar link",
+    "Укажите валюту": "Select a currency",
+    "Укажите страну": "Select a country"
 }
   

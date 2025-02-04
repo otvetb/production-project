@@ -6,6 +6,10 @@
     margin-right: 5px;
 }
 
+.readonly {
+    opacity: 0.85;
+}
+
 .input {
     flex-grow: 1;
     color: var(--primary-color);
