@@ -13,6 +13,11 @@
     "Ваш никнейм": "Your nickname",
     "Ссылка на аватар": "Avatar link",
     "Укажите валюту": "Select a currency",
-    "Укажите страну": "Select a country"
+    "Укажите страну": "Select a country",
+    "Произошла ошибка сервера": "An error occurred on the server",
+    "Страна обязательна": "Country is required",
+    "Данные не указаны": "Data is not specified",
+    "Имя и Фамилия обязательны": "Name and surname are required",
+    "Возраст должен быть числом": "Age must be a number"
 }
   
