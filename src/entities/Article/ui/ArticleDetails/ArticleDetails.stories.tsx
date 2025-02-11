@@ -56,11 +56,6 @@ const article: Article = {
             title: 'Рисунок 1 - скриншот сайта',
         },
         {
-            id: '3',
-            type: ArticleBlockType.CODE,
-            code: "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, 'db.json'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);",
-        },
-        {
             id: '7',
             type: ArticleBlockType.TEXT,
             title: 'Заголовок этого блока',
