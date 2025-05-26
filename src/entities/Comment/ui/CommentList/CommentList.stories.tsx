@@ -30,6 +30,12 @@ Normal.args = {
 
 export const Loading = Template.bind({});
 Loading.args = {
-    comments: [],
+    comments: [
+        {
+            id: '1',
+            text: 'text',
+            user: { id: '1', username: 'username' },
+        },
+    ],
     isLoading: true,
 };
