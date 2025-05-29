@@ -42,7 +42,7 @@ export const fetchArticlesList = createAsyncThunk<
                         _sort: sort,
                         _order: order,
                         q: search,
-                        type: type === ArticleType.ALL ? undefined : type,
+                        type_like: type === ArticleType.ALL ? undefined : type,
                     },
                 });
 
@@ -56,6 +56,3 @@ export const fetchArticlesList = createAsyncThunk<
             }
         },
     );
-function useSelector(getArticlesPageSort: any) {
-    throw new Error('Function not implemented.');
-}
