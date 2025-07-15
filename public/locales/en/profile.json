@@ -18,6 +18,7 @@
     "Страна обязательна": "Country is required",
     "Данные не указаны": "Data is not specified",
     "Имя и Фамилия обязательны": "Name and surname are required",
-    "Возраст должен быть числом": "Age must be a number"
+    "Возраст должен быть числом": "Age must be a number",
+    "Профиль не найден": "Profile not found"
 }
   
