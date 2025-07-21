@@ -1,4 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import { EditableProfilePageHeader } from './EditableProfilePageHeader';
 
 export default {
@@ -15,3 +16,7 @@ export const Normal = Template.bind({});
 Normal.args = {
 
 };
+
+Normal.decorators = [
+    StoreDecorator({}),
+];
