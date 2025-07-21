@@ -5,5 +5,8 @@ import { counterReducer } from './model/slice/counterSlice';
 export {
     Counter,
     counterReducer,
+};
+
+export type {
     CounterSchema,
 };

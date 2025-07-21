@@ -13,10 +13,9 @@ import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
 import cls from './ArticleListItem.module.scss';
 import {
     Article,
-    ArticleBlockType,
     ArticleTextBlock,
-    ArticleView,
 } from '../../model/types/article';
+import { ArticleBlockType, ArticleView } from 'entities/Article/model/consts/articleConsts';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 
 interface ArticleListItemSkeletonProps {
