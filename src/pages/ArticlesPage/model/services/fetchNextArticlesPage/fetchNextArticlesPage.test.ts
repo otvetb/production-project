@@ -1,7 +1,7 @@
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { ArticleView } from 'entities/Article';
-import { ArticleType } from 'entities/Article/model/consts/articleConsts';
-import { ArticleSortField } from 'entities/Article/model/consts/articleConsts';
+import { ArticleType, ArticleSortField } from 'entities/Article/model/consts/articleConsts';
+
 import { fetchNextArticlesPage } from './fetchNextArticlesPage';
 import { fetchArticlesList } from '../fetchArticlesList/fetchArticlesList';
 
