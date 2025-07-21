@@ -18,5 +18,6 @@
   "Форма авторизации": "Authorization form",
   "Вы ввели неверный логин или пароль": "Invalid login or password",
   "Выйти": "Sign out",
-  "Создать статью": "Create article"
+  "Создать статью": "Create article",
+  "Админка": "Admin panel"
 }
