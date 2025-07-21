@@ -49,6 +49,7 @@ export const EditableProfilePageHeader: FC<EditableProfilePageHeaderProps> = (pr
                             <Button
                                 theme={ButtonTheme.OUTLINE}
                                 onClick={onEdit}
+                                data-testid="EditableProfileCardHeader.EditButton"
                             >
                                 {t('Редактировать')}
                             </Button>
@@ -58,6 +59,7 @@ export const EditableProfilePageHeader: FC<EditableProfilePageHeaderProps> = (pr
                                 <Button
                                     theme={ButtonTheme.OUTLINE_RED}
                                     onClick={onCancelEdit}
+                                    data-testid="EditableProfileCardHeader.CancelButton"
                                 >
                                     {t('Отменить')}
                                 </Button>
@@ -65,6 +67,7 @@ export const EditableProfilePageHeader: FC<EditableProfilePageHeaderProps> = (pr
                                 <Button
                                     theme={ButtonTheme.OUTLINE}
                                     onClick={onSave}
+                                    data-testid="EditableProfileCardHeader.SaveButton"
                                 >
                                     {t('Сохранить')}
                                 </Button>
