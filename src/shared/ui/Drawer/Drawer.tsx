@@ -1,8 +1,8 @@
-import { classNames, Mods } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import {
     memo, ReactNode, useCallback, useEffect,
 } from 'react';
-import { useTheme } from 'app/providers/ThemeProvider';
+import { useTheme } from '@/app/providers/ThemeProvider';
 import { Portal } from '@headlessui/react';
 import { useAnimationLibs } from '../../lib/components/AnimationProvider';
 import cls from './Drawer.module.scss';
