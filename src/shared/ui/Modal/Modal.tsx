@@ -1,7 +1,7 @@
-import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import React, {
     FC,
 } from 'react';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 
 import { useTheme } from '@/app/providers/ThemeProvider';
 import { useModal } from '@/shared/lib/hooks/useModal/useModal';

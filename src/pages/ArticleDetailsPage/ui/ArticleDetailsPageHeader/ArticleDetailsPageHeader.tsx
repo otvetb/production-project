@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next';
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { memo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { Button } from '@/shared/ui/Button/Button';
-import { useSelector } from 'react-redux';
 import { getArticleDetailsData } from '@/entities/Article';
 import { getCanEditArticle } from '@/entities/Article/model/selectors/article';
 import { HStack } from '@/shared/ui/Stack';

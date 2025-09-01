@@ -1,12 +1,12 @@
-import { classNames } from '@/shared/lib/classNames/classNames';
 import {
     memo, useCallback,
     useEffect,
 } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useSelector, useStore } from 'react-redux';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
 import Input from '@/shared/ui/Input/Input';
-import { useSelector, useStore } from 'react-redux';
 import Text, { TextTheme } from '@/shared/ui/Text/Text';
 import { ReduxStoreWithManager } from '@/app/providers/StoreProvider';
 import DynamicModuleLoader, { ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
