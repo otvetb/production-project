@@ -659,6 +659,12 @@
       "userId": "1",
       "text": "123",
       "id": "U1v3zZj"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "text": "sdfgsdg",
+      "id": "0w_sV6f"
     }
   ],
   "users": [
@@ -696,10 +702,10 @@
       "firstname": "fafasfa",
       "lastname": "asfewrsggsd",
       "age": 465,
-      "currency": "USD",
-      "country": "USA",
+      "currency": "RUB",
+      "country": "Russia",
       "city": "Moscow",
-      "username": "admin213",
+      "username": "admin",
       "avatar": "https://hotdem.ru/demotivators/2020/1/hotdem_ru_642191489805477355755.jpg"
     },
     {
@@ -742,15 +748,20 @@
       "rate": 5,
       "feedback": "jkhjkhkljh",
       "id": "howtSdm"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "rate": 4,
+      "feedback": "fasfafasfsf",
+      "id": "IBqwuB1"
     }
   ],
   "profile-ratings": [
     {
       "id": "1",
       "profileId": "1",
-      "userId": "1",
-      "rate": 4,
-      "feedback": "good"
+      "userId": "1"
     },
     {
       "id": "2",
@@ -758,6 +769,34 @@
       "userId": "1",
       "rate": 2,
       "feedback": "bad"
+    },
+    {
+      "userId": "1",
+      "profileId": "1",
+      "rate": 5,
+      "feedback": "",
+      "id": "uQmRsk0"
+    },
+    {
+      "userId": "2",
+      "profileId": "2",
+      "rate": 5,
+      "feedback": "super",
+      "id": "aTuOGCf"
+    },
+    {
+      "userId": "2",
+      "profileId": "1",
+      "rate": 5,
+      "feedback": "wow",
+      "id": "z_ovjHO"
+    },
+    {
+      "userId": "1",
+      "profileId": "1",
+      "rate": 4,
+      "feedback": "",
+      "id": "EP5zDnl"
     }
   ]
 }
