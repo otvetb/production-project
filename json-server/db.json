@@ -759,11 +759,6 @@
   ],
   "profile-ratings": [
     {
-      "id": "1",
-      "profileId": "1",
-      "userId": "1"
-    },
-    {
       "id": "2",
       "profileId": "2",
       "userId": "1",
@@ -773,44 +768,9 @@
     {
       "userId": "1",
       "profileId": "1",
-      "rate": 5,
-      "feedback": "",
-      "id": "uQmRsk0"
-    },
-    {
-      "userId": "2",
-      "profileId": "2",
-      "rate": 5,
-      "feedback": "super",
-      "id": "aTuOGCf"
-    },
-    {
-      "userId": "2",
-      "profileId": "1",
-      "rate": 5,
-      "feedback": "wow",
-      "id": "z_ovjHO"
-    },
-    {
-      "userId": "1",
-      "profileId": "1",
       "rate": 4,
       "feedback": "",
-      "id": "EP5zDnl"
-    },
-    {
-      "userId": "1",
-      "profileId": "1",
-      "rate": 5,
-      "feedback": "",
-      "id": "62pIgsw"
-    },
-    {
-      "userId": "1",
-      "profileId": "1",
-      "rate": 4,
-      "feedback": "",
-      "id": "_DxhaV1"
+      "id": "vUfbWM1"
     }
   ]
 }

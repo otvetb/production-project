@@ -15,6 +15,9 @@ export default ({ config }: {config: WebpackConfiguration}) => {
     };
     config!.resolve!.modules!.push(paths.src);
     config!.resolve!.extensions!.push('.ts', '.tsx');
+    config!.resolve!.alias = {
+        '@': paths.src,
+    };
 
     // eslint-disable-next-line no-param-reassign
     // @ts-ignore
