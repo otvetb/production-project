@@ -702,8 +702,8 @@
       "firstname": "fafasfa",
       "lastname": "asfewrsggsd",
       "age": 465,
-      "currency": "RUB",
-      "country": "Russia",
+      "currency": "USD",
+      "country": "Belarus",
       "city": "Moscow",
       "username": "admin",
       "avatar": "https://hotdem.ru/demotivators/2020/1/hotdem_ru_642191489805477355755.jpg"
@@ -797,6 +797,20 @@
       "rate": 4,
       "feedback": "",
       "id": "EP5zDnl"
+    },
+    {
+      "userId": "1",
+      "profileId": "1",
+      "rate": 5,
+      "feedback": "",
+      "id": "62pIgsw"
+    },
+    {
+      "userId": "1",
+      "profileId": "1",
+      "rate": 4,
+      "feedback": "",
+      "id": "_DxhaV1"
     }
   ]
 }
