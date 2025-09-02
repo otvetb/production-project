@@ -12,7 +12,7 @@ interface DrawerProps {
     className?: string;
     children: ReactNode;
     isOpen?: boolean;
-    onClick?: () => void;
+    onClose?: () => void;
     lazy?: boolean;
 }
 
@@ -21,7 +21,7 @@ export const DrawerContent = memo((props: DrawerProps) => {
         className,
         children,
         isOpen,
-        onClick,
+        onClose,
     } = props;
 
     const { theme } = useTheme();
@@ -41,7 +41,7 @@ export const DrawerContent = memo((props: DrawerProps) => {
 
     const close = (velocity = 0) => {
         api.start({
-            y: height, immediate: false, config: { ...Spring.config.stiff, velocity }, onResolve: onClick,
+            y: height, immediate: false, config: { ...Spring.config.stiff, velocity }, onResolve: onClose,
         });
     };
 
