@@ -1,5 +1,5 @@
 {
-    "notifications": [
+  "notifications": [
     {
       "id": "1",
       "title": "Уведомление 1",
@@ -712,6 +712,52 @@
       "city": "Moscow",
       "username": "pro_ivan",
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "articleId": "1",
+      "userId": "1",
+      "rate": 4,
+      "feedback": "good"
+    },
+    {
+      "id": "2",
+      "articleId": "2",
+      "userId": "1",
+      "rate": 2,
+      "feedback": "bad"
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "rate": 3,
+      "feedback": "",
+      "id": "W6YCIdI"
+    },
+    {
+      "articleId": "19",
+      "userId": "1",
+      "rate": 5,
+      "feedback": "jkhjkhkljh",
+      "id": "howtSdm"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "profileId": "1",
+      "userId": "1",
+      "rate": 4,
+      "feedback": "good"
+    },
+    {
+      "id": "2",
+      "profileId": "2",
+      "userId": "1",
+      "rate": 2,
+      "feedback": "bad"
     }
   ]
 }
