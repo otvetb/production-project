@@ -1,5 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import '@/app/styles/index.scss';
+import cls from './CountrySelectSorybook.module.scss';
 import { CountrySelect } from './CountrySelect';
 
 export default {
@@ -10,7 +11,8 @@ export default {
     },
 } as ComponentMeta<typeof CountrySelect>;
 
-const Template: ComponentStory<typeof CountrySelect> = (args) => <CountrySelect {...args} />;
+const Template: ComponentStory<typeof CountrySelect> = (args) => <CountrySelect className={cls.marginForStorybook} {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+};

@@ -1,12 +1,17 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import withMock from 'storybook-addon-mock';
 import { NotificationButton } from './NotificationButton';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export default {
-    title: 'shared/NotificationButton',
+    title: 'features/NotificationButton',
     component: NotificationButton,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [
+        withMock,
+    ],
 } as ComponentMeta<typeof NotificationButton>;
 
 const Template: ComponentStory<typeof NotificationButton> = (args) => <NotificationButton {...args} />;
@@ -14,4 +19,44 @@ const Template: ComponentStory<typeof NotificationButton> = (args) => <Notificat
 export const Normal = Template.bind({});
 Normal.args = {
 
+};
+
+Normal.decorators = [
+    StoreDecorator({}),
+];
+
+Normal.parameters = {
+    mockData: [
+        {
+            url: `${__API__}/notifications`,
+            method: 'GET',
+            status: 200,
+            response: [
+                {
+                    id: '1',
+                    title: 'Уведомление 1',
+                    description: 'Описание уведомления 1',
+                    userId: '1',
+                },
+                {
+                    id: '2',
+                    title: 'Уведомление 2',
+                    description: 'Описание уведомления 2',
+                    userId: '1',
+                },
+                {
+                    id: '3',
+                    title: 'Уведомление 3',
+                    description: 'Описание уведомления 3',
+                    userId: '1',
+                },
+                {
+                    id: '4',
+                    title: 'Уведомление 4',
+                    description: 'Описание уведомления 4',
+                    userId: '1',
+                },
+            ],
+        },
+    ],
 };
