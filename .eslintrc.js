@@ -59,6 +59,7 @@ module.exports = {
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
         'otvetb-plugin/path-checker': ['error', { alias: '@' }],
+        'otvetb-plugin/check-public-api': ['error', { alias: '@' }],
     },
     globals: {
         __IS_DEV__: true,
