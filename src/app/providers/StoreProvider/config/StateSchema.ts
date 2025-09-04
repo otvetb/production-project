@@ -10,7 +10,7 @@ import {
 } from '@/pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from '@/features/addCommentForm';
 import { ArticlesPageSchema } from '@/pages/ArticlesPage';
-import { ScrollSchema } from '@/features/ScrollRestoration';
+import { ScrollRestorationSchema } from '@/features/ScrollRestoration';
 import { ArticleDetailsSchema } from '@/entities/Article';
 import { rtkApi } from '@/shared/api/rtkApi';
 import { ProfileSchema } from '@/features/editableProfileCard';
@@ -19,7 +19,7 @@ export interface StateSchema {
     counter: CounterSchema,
     user: UserSchema,
     [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>,
-    scrollRestoration: ScrollSchema,
+    scrollRestoration: ScrollRestorationSchema,
     // Асинхронные редюсеры
     loginForm?: LoginSchema,
     profile?: ProfileSchema,
