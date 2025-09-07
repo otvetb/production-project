@@ -3,10 +3,10 @@ import {
 } from 'react';
 import { Portal } from '@headlessui/react';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
-import { useTheme } from '@/app/providers/ThemeProvider';
 import { AnimationProvider, useAnimationLibs } from '../../lib/components/AnimationProvider';
 import cls from './Drawer.module.scss';
 import { Overlay } from '../Overlay/Overlay';
+import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 
 interface DrawerProps {
     className?: string;

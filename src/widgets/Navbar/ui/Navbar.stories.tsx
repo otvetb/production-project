@@ -1,9 +1,10 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+// eslint-disable-next-line otvetb-plugin/layer-imports
 import '@/app/styles/index.scss';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/app/providers/ThemeProvider';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Navbar } from './Navbar';
+import { Theme } from '@/shared/const/theme';
 
 export default {
     title: 'widgets/Navbar',

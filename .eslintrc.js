@@ -66,6 +66,13 @@ module.exports = {
                 testFilesPatterns: ['**/*.test.*', '**/*.stories.*', '**/StoreDecorator.tsx'],
             },
         ],
+        'otvetb-plugin/layer-imports': [
+            'error',
+            {
+                alias: '@',
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing', '@/app/styles/index.scss'],
+            },
+        ],
     },
     globals: {
         __IS_DEV__: true,
