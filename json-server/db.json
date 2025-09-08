@@ -761,6 +761,13 @@
       "rate": 4,
       "feedback": "fasfafasfsf",
       "id": "IBqwuB1"
+    },
+    {
+      "articleId": "5",
+      "userId": "1",
+      "rate": 2,
+      "feedback": "",
+      "id": "S0IGtqx"
     }
   ],
   "profile-ratings": [
