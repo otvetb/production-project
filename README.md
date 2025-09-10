@@ -61,7 +61,7 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 3) Скриншотное тестирование с loki `npm run test:ui`
 4) e2e тестирование с Cypress `npm run test:e2e`
 
-Подробнее о тестах - [документация тестирование](/docs/tests.md)
+Подробнее о тестах - [документация тестирования](/docs/tests.md)
 
 ----
 

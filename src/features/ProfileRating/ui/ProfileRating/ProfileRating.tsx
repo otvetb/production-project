@@ -58,3 +58,5 @@ export const ProfileRating = memo((props: ProfileRatingProps) => {
         />
     );
 });
+
+export default ProfileRating;
