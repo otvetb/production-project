@@ -138,6 +138,7 @@
     "configurations": {
       "chrome.laptop": {
         "target": "chrome.app",
+        "waitBeforeScreenshot": 1000,
         "width": 1366,
         "height": 768,
         "deviceScaleFactor": 1,
