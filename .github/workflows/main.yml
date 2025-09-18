@@ -89,6 +89,7 @@ jobs:
         with:
           path: '.loki'
       - name: Show .loki contents
+        if: always()
         run: |
           if [ -d ".loki" ]; then
             echo ".loki exists, files:"
