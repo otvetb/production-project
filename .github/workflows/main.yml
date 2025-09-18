@@ -44,7 +44,7 @@ on:
   pull_request:
     branches: [ master ]
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 concurrency:
@@ -81,32 +81,17 @@ jobs:
         run: npm run test:ui:report
         if: always()
       - name: Setup Pages
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@v4
         if: always()
-      - name: Prepare static deploy folder
-        if: always()
-        run: |
-          mkdir deploy
-          cp .loki/report.html deploy/index.html
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         if: always()
         with:
-          path: './deploy'
-      - name: Show .loki contents
-        if: always()
-        run: |
-          if [ -d ".loki" ]; then
-            echo ".loki exists, files:"
-            ls -la .loki
-          else
-          echo ".loki does NOT exist"
-          fi
+          path: '.loki'
       - name: Deploy to GitHub Pages
         id: deployment
         if: always()
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
 
   checks:
     runs-on: ubuntu-latest
