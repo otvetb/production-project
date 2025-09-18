@@ -61,7 +61,7 @@ jobs:
       matrix:
         node-version: [ 17.x ]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Staring Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -88,6 +88,14 @@ jobs:
         if: always()
         with:
           path: '.loki'
+      - name: Show .loki contents
+        run: |
+          if [ -d ".loki" ]; then
+            echo ".loki exists, files:"
+            ls -la .loki
+          else
+          echo ".loki does NOT exist"
+          fi
       - name: Deploy to GitHub Pages
         id: deployment
         if: always()
