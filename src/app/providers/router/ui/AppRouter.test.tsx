@@ -46,13 +46,9 @@ describe('app/router/AppRouter', () => {
             },
         });
 
-        const page = await screen.findByTestId('ProfilePage');
-        console.log('Page element:', page); // В логи Actions: увидите тип и содержимое
-        console.log('Page type:', typeof page);
-        console.log('Is element:', page instanceof HTMLElement);
         await waitFor(() => {
-            expect(page).toBeInTheDocument(); // Ассерт здесь
-        });
+            expect(screen.getByTestId('ProfilePage')).toBeInTheDocument();
+        }, { timeout: 5000 });
     });
 
     test('Доступ запрещен (отсутствует роль)', async () => {
