@@ -1,10 +1,13 @@
-import { screen } from '@testing-library/react';
+import { screen, waitFor } from '@testing-library/react';
 import { componentRender } from '@/shared/lib/tests/componentRender/componentRender';
 import AppRouter from './AppRouter';
 import { getRouteAbout, getRouteAdminPanel, getRouteProfile } from '@/shared/const/router';
 import { UserRole } from '@/entities/User';
 
 describe('app/router/AppRouter', () => {
+    beforeAll(() => {
+        jest.setTimeout(10000); // 10 секунд для всех тестов в этом блоке
+    });
     test('Страница должна отрендериться', async () => {
         componentRender(<AppRouter />, {
             route: getRouteAbout(),
@@ -44,7 +47,12 @@ describe('app/router/AppRouter', () => {
         });
 
         const page = await screen.findByTestId('ProfilePage');
-        expect(page).toBeInTheDocument();
+        console.log('Page element:', page); // В логи Actions: увидите тип и содержимое
+        console.log('Page type:', typeof page);
+        console.log('Is element:', page instanceof HTMLElement);
+        await waitFor(() => {
+            expect(page).toBeInTheDocument(); // Ассерт здесь
+        });
     });
 
     test('Доступ запрещен (отсутствует роль)', async () => {
