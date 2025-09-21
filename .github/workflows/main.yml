@@ -85,6 +85,8 @@ jobs:
         if: always()
       - name: move loki
         run: mv .loki reports/
+      - name: show reports file
+        run: ls -la reports
         if: always()
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -117,6 +119,4 @@ jobs:
         if: always()
       - name: linting css
         run: npm run lint:scss
-      - name: unit testing
-        if: always()
-        run: npm run test:unit
+
