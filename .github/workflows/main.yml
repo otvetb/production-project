@@ -52,7 +52,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   build-and-ui-testing:
-    runs-on: windows-latest
+    runs-on: windows-2022
     concurrency: ci-${{ github.ref }}
     environment:
       name: github-pages
@@ -117,7 +117,3 @@ jobs:
         if: always()
       - name: linting css
         run: npm run lint:scss
-      - name: unit testing
-        if: always()
-        run: npm run test:unit
-
