@@ -87,7 +87,7 @@ jobs:
         run: mv .loki reports/
         if: always()
       - name: show reports file
-        run: ls -la reports
+        run: Get-ChildItem reports -Force -Recurse
         if: always()
       - name: Setup Pages
         uses: actions/configure-pages@v4
