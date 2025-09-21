@@ -43,7 +43,7 @@ describe('app/router/AppRouter', () => {
             },
         });
 
-        const page = await screen.getByTestId('ProfilePage');
+        const page = await screen.findByTestId('ProfilePage');
         await waitFor(() => expect(page).toBeInTheDocument());
     });
 
