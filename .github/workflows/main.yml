@@ -86,9 +86,6 @@ jobs:
       - name: move loki
         run: mv .loki reports/loki
         if: always()
-      - name: show reports file
-        run: ls -la reports
-        if: always()
       - name: Setup Pages
         uses: actions/configure-pages@v4
         if: always()
