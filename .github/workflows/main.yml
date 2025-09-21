@@ -52,7 +52,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   build-and-ui-testing:
-    runs-on: windows-2022
+    runs-on: ubuntu-latest
     concurrency: ci-${{ github.ref }}
     environment:
       name: github-pages
@@ -103,7 +103,7 @@ jobs:
         uses: actions/deploy-pages@v4
 
   checks:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [ 17.x ]
