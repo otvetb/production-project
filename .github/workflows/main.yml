@@ -52,7 +52,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   build-and-ui-testing:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     concurrency: ci-${{ github.ref }}
     environment:
       name: github-pages
@@ -84,7 +84,7 @@ jobs:
         run: npm run test:ui:report
         if: always()
       - name: move loki
-        run: mv .loki reports/
+        run: mv .loki reports/loki
         if: always()
       - name: show reports file
         run: ls -la reports
