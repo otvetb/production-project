@@ -11,7 +11,9 @@ export default {
     },
 } as ComponentMeta<typeof ArticleList>;
 
-const Template: ComponentStory<typeof ArticleList> = (args) => <ArticleList {...args} />;
+const Template: ComponentStory<typeof ArticleList> = (args) => (
+    <ArticleList {...args} />
+);
 
 const article = {
     id: '1',
@@ -24,13 +26,7 @@ const article = {
     img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
     views: 1022,
     createdAt: '26.02.2025',
-    type: [
-        'IT',
-        'SCIENCE',
-        'ECONOMICS',
-        'POLITICS',
-        'ECONOMICS',
-    ],
+    type: ['IT', 'SCIENCE', 'ECONOMICS', 'POLITICS', 'ECONOMICS'],
     blocks: [
         {
             id: '1',
@@ -110,23 +106,19 @@ isLoadingBig.args = {
 export const Small = Template.bind({});
 Small.args = {
     isLoading: false,
-    articles: new Array(16)
-        .fill(0)
-        .map((item, index) => ({
-            ...article,
-            id: String(index),
-        })),
+    articles: new Array(16).fill(0).map((item, index) => ({
+        ...article,
+        id: String(index),
+    })),
     view: ArticleView.SMALL,
 };
 
 export const Big = Template.bind({});
 Big.args = {
     isLoading: false,
-    articles: new Array(16)
-        .fill(0)
-        .map((item, index) => ({
-            ...article,
-            id: String(index),
-        })),
+    articles: new Array(16).fill(0).map((item, index) => ({
+        ...article,
+        id: String(index),
+    })),
     view: ArticleView.BIG,
 };

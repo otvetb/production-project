@@ -22,13 +22,7 @@ const article = {
     img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
     views: 1022,
     createdAt: '26.02.2025',
-    type: [
-        'IT',
-        'SCIENCE',
-        'ECONOMICS',
-        'POLITICS',
-        'ECONOMICS',
-    ],
+    type: ['IT', 'SCIENCE', 'ECONOMICS', 'POLITICS', 'ECONOMICS'],
     blocks: [
         {
             id: '1',
@@ -91,7 +85,9 @@ const article = {
     ],
 } as Article;
 
-const Template: ComponentStory<typeof ArticleListItem> = (args) => <ArticleListItem {...args} />;
+const Template: ComponentStory<typeof ArticleListItem> = (args) => (
+    <ArticleListItem {...args} />
+);
 
 export const Small = Template.bind({});
 Small.args = {

@@ -12,12 +12,12 @@ interface UseModalProps {
     animationDelay: number;
 }
 
-export function useModal({
-    onClose, isOpen, animationDelay,
-}: UseModalProps) {
+export function useModal({ onClose, isOpen, animationDelay }: UseModalProps) {
     const [isClosing, setIsClosing] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
-    const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
+    const timerRef = useRef() as MutableRefObject<
+        ReturnType<typeof setTimeout>
+    >;
 
     const close = useCallback(() => {
         if (onClose) {
@@ -29,11 +29,14 @@ export function useModal({
         }
     }, [animationDelay, onClose]);
 
-    const onKeyDown = useCallback((e: KeyboardEvent) => {
-        if (e.key === 'Escape') {
-            close();
-        }
-    }, [close]);
+    const onKeyDown = useCallback(
+        (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+                close();
+            }
+        },
+        [close],
+    );
 
     useEffect(() => {
         if (isOpen) {

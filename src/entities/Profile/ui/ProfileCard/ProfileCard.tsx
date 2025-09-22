@@ -48,7 +48,13 @@ export const ProfileCard: FC<ProfileCardProps> = (props) => {
 
     if (isLoading) {
         return (
-            <HStack justify="center" max className={classNames(cls.ProfileCard, { [cls.error]: true }, [className])}>
+            <HStack
+                justify="center"
+                max
+                className={classNames(cls.ProfileCard, { [cls.error]: true }, [
+                    className,
+                ])}
+            >
                 <Loader />
             </HStack>
         );
@@ -56,7 +62,14 @@ export const ProfileCard: FC<ProfileCardProps> = (props) => {
 
     if (error) {
         return (
-            <HStack justify="center" max className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
+            <HStack
+                justify="center"
+                max
+                className={classNames(cls.ProfileCard, {}, [
+                    className,
+                    cls.error,
+                ])}
+            >
                 <Text
                     theme={TextTheme.ERROR}
                     title={t('Произошла ошибка при загрузке профиля')}
@@ -72,12 +85,16 @@ export const ProfileCard: FC<ProfileCardProps> = (props) => {
     };
 
     return (
-        <VStack gap="16" max className={classNames(cls.ProfileCard, mods, [className])}>
+        <VStack
+            gap="16"
+            max
+            className={classNames(cls.ProfileCard, mods, [className])}
+        >
             {data?.avatar && (
                 <HStack justify="center" max className={cls.avatarWrapper}>
                     <Avatar src={data?.avatar} />
                 </HStack>
-            ) }
+            )}
             <Input
                 value={data?.firstname}
                 placeholder={t('Ваше имя')}

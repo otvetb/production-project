@@ -1,7 +1,11 @@
 import { screen, waitFor } from '@testing-library/react';
 import { componentRender } from '@/shared/lib/tests/componentRender/componentRender';
 import AppRouter from './AppRouter';
-import { getRouteAbout, getRouteAdminPanel, getRouteProfile } from '@/shared/const/router';
+import {
+    getRouteAbout,
+    getRouteAdminPanel,
+    getRouteProfile,
+} from '@/shared/const/router';
 import { UserRole } from '@/entities/User';
 
 describe('app/router/AppRouter', () => {
@@ -46,9 +50,12 @@ describe('app/router/AppRouter', () => {
             },
         });
 
-        await waitFor(() => {
-            expect(screen.getByTestId('ProfilePage')).toBeInTheDocument();
-        }, { timeout: 5000 });
+        await waitFor(
+            () => {
+                expect(screen.getByTestId('ProfilePage')).toBeInTheDocument();
+            },
+            { timeout: 5000 },
+        );
     });
 
     test('Доступ запрещен (отсутствует роль)', async () => {

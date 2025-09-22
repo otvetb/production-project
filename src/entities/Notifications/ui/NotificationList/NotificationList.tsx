@@ -37,7 +37,10 @@ export const NotificationList = memo((props: NotificationListProps) => {
             className={classNames(cls.NotificationList, {}, [className])}
         >
             {data?.map((notification) => (
-                <NotificationItem key={notification.id} notification={notification} />
+                <NotificationItem
+                    key={notification.id}
+                    notification={notification}
+                />
             ))}
         </VStack>
     );

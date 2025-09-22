@@ -7,9 +7,9 @@ export const setRate = (starsCount: number, text?: string) => {
 };
 
 declare global {
-  namespace Cypress {
-    interface Chainable {
-      setRate(rate: number, text?: string): Chainable<void>
+    namespace Cypress {
+        interface Chainable {
+            setRate(rate: number, text?: string): Chainable<void>;
+        }
     }
-  }
 }

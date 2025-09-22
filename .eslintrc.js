@@ -8,6 +8,7 @@ module.exports = {
         'plugin:react/recommended',
         'airbnb',
         'plugin:i18next/recommended',
+        'prettier',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -26,11 +27,11 @@ module.exports = {
         'unused-imports',
     ],
     rules: {
-        'react/jsx-indent': [2, 4],
-        'react/jsx-indent-props': [2, 4],
         'unused-imports/no-unused-imports': 'error',
-        indent: [2, 4],
-        'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
+        'react/jsx-filename-extension': [
+            2,
+            { extensions: ['.js', '.jsx', '.tsx'] },
+        ],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
         'no-unused-vars': 'off',
@@ -43,15 +44,28 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': [
-            'error', {
+            'error',
+            {
                 markupOnly: true,
                 ignoreAttribute: [
-                    'data-testid', 'to', 'target', 'direction', 'align', 'justify', 'gap', 'role', 'as', 'borderRadius',
+                    'data-testid',
+                    'to',
+                    'target',
+                    'direction',
+                    'align',
+                    'justify',
+                    'gap',
+                    'role',
+                    'as',
+                    'borderRadius',
                 ],
             },
         ],
         'max-len': ['error', { ignoreComments: true, code: 121 }],
-        'linebreak-style': ['error', process.platform === 'win32' ? 'windows' : 'unix'],
+        'linebreak-style': [
+            'error',
+            process.platform === 'win32' ? 'windows' : 'unix',
+        ],
         'jsx-a11y/click-events-have-key-events': 'off',
         'jsx-a11y/no-static-element-interactions': 'off',
         'react-hooks/rules-of-hooks': 'error',
@@ -65,16 +79,25 @@ module.exports = {
             'error',
             {
                 alias: '@',
-                testFilesPatterns: ['**/*.test.*', '**/*.stories.*', '**/StoreDecorator.tsx'],
+                testFilesPatterns: [
+                    '**/*.test.*',
+                    '**/*.stories.*',
+                    '**/StoreDecorator.tsx',
+                ],
             },
         ],
         'otvetb-plugin/layer-imports': [
             'error',
             {
                 alias: '@',
-                ignoreImportPatterns: ['**/StoreProvider', '**/testing', '@/app/styles/index.scss'],
+                ignoreImportPatterns: [
+                    '**/StoreProvider',
+                    '**/testing',
+                    '@/app/styles/index.scss',
+                ],
             },
         ],
+        'react/jsx-max-props-per-line': ['error', { maximum: 3 }],
     },
     globals: {
         __IS_DEV__: true,

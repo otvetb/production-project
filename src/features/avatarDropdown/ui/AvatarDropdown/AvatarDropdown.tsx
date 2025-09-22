@@ -37,12 +37,18 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
         <Dropdown
             className={classNames('', {}, [className])}
             direction="bottomLeft"
-            trigger={<Avatar size={30} src={authData.avatar} fallbackInverted />}
+            trigger={
+                <Avatar size={30} src={authData.avatar} fallbackInverted />
+            }
             items={[
-                ...(isAdminPanelAvailable ? [{
-                    content: t('Админка'),
-                    href: getRouteAdminPanel(),
-                }] : []),
+                ...(isAdminPanelAvailable
+                    ? [
+                          {
+                              content: t('Админка'),
+                              href: getRouteAdminPanel(),
+                          },
+                      ]
+                    : []),
                 {
                     content: t('Профиль'),
                     href: getRouteProfile(authData.id),

@@ -11,10 +11,6 @@ export const BugButton: FC = () => {
             throw new Error();
         }
     }, [error]);
-    return (
-        <Button onClick={onThrow}>
-            123
-        </Button>
-    );
+    return <Button onClick={onThrow}>123</Button>;
 };
 export default BugButton;

@@ -12,7 +12,9 @@ export default {
     },
 } as ComponentMeta<typeof ProfileCard>;
 
-const Template: ComponentStory<typeof ProfileCard> = (args) => <ProfileCard {...args} />;
+const Template: ComponentStory<typeof ProfileCard> = (args) => (
+    <ProfileCard {...args} />
+);
 
 export const Primary = Template.bind({});
 Primary.args = {
@@ -27,9 +29,11 @@ Primary.args = {
         avatar: 'https://avatars.githubusercontent.com/u/5502029?v=4',
     },
 };
-Primary.decorators = [StoreDecorator({
-    loginForm: { username: '123', password: '123' },
-})];
+Primary.decorators = [
+    StoreDecorator({
+        loginForm: { username: '123', password: '123' },
+    }),
+];
 
 export const Loading = Template.bind({});
 Loading.args = {

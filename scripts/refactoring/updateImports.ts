@@ -7,7 +7,16 @@ project.addSourceFilesAtPaths('src/**/*.{ts,tsx}');
 const files = project.getSourceFiles();
 
 function isAbsolute(value: string) {
-    const layers = ['app', 'shared', 'entities', 'features', 'widgets', 'pages', 'widgets', 'features'];
+    const layers = [
+        'app',
+        'shared',
+        'entities',
+        'features',
+        'widgets',
+        'pages',
+        'widgets',
+        'features',
+    ];
     return layers.some((layer) => value.startsWith(layer));
 }
 

@@ -14,19 +14,11 @@ export const Counter = () => {
     const counterValue = useCounterValue();
     return (
         <div>
-            <h1 data-testid="value-title">
-                {counterValue}
-            </h1>
-            <Button
-                onClick={handleIncrement}
-                data-testid="increment-btn"
-            >
+            <h1 data-testid="value-title">{counterValue}</h1>
+            <Button onClick={handleIncrement} data-testid="increment-btn">
                 +
             </Button>
-            <Button
-                onClick={handleDecrement}
-                data-testid="decrement-btn"
-            >
+            <Button onClick={handleDecrement} data-testid="decrement-btn">
                 -
             </Button>
         </div>

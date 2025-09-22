@@ -2,7 +2,11 @@ import { StateSchema } from '@/app/providers/StoreProvider';
 import { Article } from '../types/article';
 import { ArticleType, ArticleBlockType } from '../consts/articleConsts';
 
-import { getArticleDetailsData, getArticleDetailsError, getArticleDetailsIsLoading } from './articleDetails';
+import {
+    getArticleDetailsData,
+    getArticleDetailsError,
+    getArticleDetailsIsLoading,
+} from './articleDetails';
 
 describe('articleDetails.test', () => {
     test('should return data', () => {
@@ -101,7 +105,9 @@ describe('articleDetails.test', () => {
     });
     test('isLoading should work with empty state', () => {
         const state: DeepPartial<StateSchema> = {};
-        expect(getArticleDetailsIsLoading(state as StateSchema)).toEqual(undefined);
+        expect(getArticleDetailsIsLoading(state as StateSchema)).toEqual(
+            undefined,
+        );
     });
 
     test('should return error', () => {

@@ -8,19 +8,16 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-
 } as ComponentMeta<typeof NotificationButton>;
 
-const Template: ComponentStory<typeof NotificationButton> = (args) => <NotificationButton {...args} />;
+const Template: ComponentStory<typeof NotificationButton> = (args) => (
+    <NotificationButton {...args} />
+);
 
 export const Normal = Template.bind({});
-Normal.args = {
+Normal.args = {};
 
-};
-
-Normal.decorators = [
-    StoreDecorator({}),
-];
+Normal.decorators = [StoreDecorator({})];
 
 Normal.parameters = {
     mockData: [

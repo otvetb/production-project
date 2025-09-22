@@ -11,7 +11,9 @@ export default {
     },
 } as ComponentMeta<typeof Skeleton>;
 
-const Template: ComponentStory<typeof Skeleton> = (args) => <Skeleton {...args} />;
+const Template: ComponentStory<typeof Skeleton> = (args) => (
+    <Skeleton {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {
@@ -24,7 +26,6 @@ Circle.args = {
     borderRadius: '50%',
     width: '100px',
     height: '100px',
-
 };
 
 export const NormalDark = Template.bind({});

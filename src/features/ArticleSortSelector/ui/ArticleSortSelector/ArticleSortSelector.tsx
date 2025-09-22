@@ -15,40 +15,40 @@ interface ArticleSortSelectorProps {
 }
 
 export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
-    const {
-        className,
-        sort,
-        order,
-        onChangeOrder,
-        onSortOrder,
-    } = props;
+    const { className, sort, order, onChangeOrder, onSortOrder } = props;
     const { t } = useTranslation('articles');
 
-    const orderOptions = useMemo<SelectOption<SortOrder>[]>(() => [
-        {
-            value: 'asc',
-            content: t('возрастанию'),
-        },
-        {
-            value: 'desc',
-            content: t('убыванию'),
-        },
-    ], [t]);
+    const orderOptions = useMemo<SelectOption<SortOrder>[]>(
+        () => [
+            {
+                value: 'asc',
+                content: t('возрастанию'),
+            },
+            {
+                value: 'desc',
+                content: t('убыванию'),
+            },
+        ],
+        [t],
+    );
 
-    const sortFieldOptions = useMemo<SelectOption<ArticleSortField>[]>(() => [
-        {
-            value: ArticleSortField.CREATED,
-            content: t('дате создания'),
-        },
-        {
-            value: ArticleSortField.TITLE,
-            content: t('заголовку'),
-        },
-        {
-            value: ArticleSortField.VIEWS,
-            content: t('просмотрам'),
-        },
-    ], [t]);
+    const sortFieldOptions = useMemo<SelectOption<ArticleSortField>[]>(
+        () => [
+            {
+                value: ArticleSortField.CREATED,
+                content: t('дате создания'),
+            },
+            {
+                value: ArticleSortField.TITLE,
+                content: t('заголовку'),
+            },
+            {
+                value: ArticleSortField.VIEWS,
+                content: t('просмотрам'),
+            },
+        ],
+        [t],
+    );
 
     return (
         <div className={classNames(cls.ArticleSortSelector, {}, [className])}>
@@ -65,7 +65,6 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
                 onChange={onChangeOrder}
                 className={cls.order}
             />
-
         </div>
     );
 });
