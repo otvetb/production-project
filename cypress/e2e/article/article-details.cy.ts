@@ -26,3 +26,5 @@ describe('Пользователь заходит на страницу стат
         cy.get('[data-selected]').should('have.length', 5);
     });
 });
+
+export {};

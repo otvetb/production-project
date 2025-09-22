@@ -9,3 +9,5 @@ describe('Пользователь заходит на страницу стат
         cy.getByTestId('ArticleListItem').should('have.length.greaterThan', 3);
     });
 });
+
+export {};
