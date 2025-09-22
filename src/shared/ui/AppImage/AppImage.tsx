@@ -6,7 +6,7 @@ import {
     useState,
 } from 'react';
 
-interface AppImageProps extends ImgHTMLAttributes<HTMLImageElement>{
+interface AppImageProps extends ImgHTMLAttributes<HTMLImageElement> {
     className?: string;
     fallback?: ReactElement;
     errorFallback?: ReactElement;
@@ -44,7 +44,5 @@ export const AppImage = memo((props: AppImageProps) => {
         return errorFallback;
     }
 
-    return (
-        <img className={className} alt={alt} src={src} {...otherProps} />
-    );
+    return <img className={className} alt={alt} src={src} {...otherProps} />;
 });
