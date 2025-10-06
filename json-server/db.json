@@ -729,6 +729,10 @@
       "features": {
         "isArticleRatingEnabled": false,
         "isCounterEnabled": false
+      },
+      "jsonSettings": {
+        "theme": "app_orange_theme",
+        "isArticlesPageWasOpened": true
       }
     },
     {
