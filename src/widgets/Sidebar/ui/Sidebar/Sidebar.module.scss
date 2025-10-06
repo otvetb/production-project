@@ -63,3 +63,14 @@
         transition: 0.2s opacity;
     }
 }
+
+.SidebarRedesigned {
+    background: var(--light-bg-redesigned);
+    border-radius: 32px;
+    width: 220px;
+    height: 100%;
+}
+
+.appLogo {
+    padding-top: 20px;
+}

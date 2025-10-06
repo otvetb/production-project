@@ -710,10 +710,11 @@
       "avatar": "https://hotdem.ru/demotivators/2020/1/hotdem_ru_642191489805477355755.jpg",
       "features": {
         "isArticleRatingEnabled": true,
-        "isCounterEnabled": true
+        "isCounterEnabled": true,
+        "isAppRedesigned": true
       },
       "jsonSettings": {
-        "theme": "app_light_theme",
+        "theme": "app_dark_theme",
         "isArticlesPageWasOpened": true
       }
     },
