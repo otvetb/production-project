@@ -11,7 +11,7 @@ import { Profile } from '../../model/types/profile';
 import cls from './ProfileCard.module.scss';
 import Loader from '@/shared/ui/deprecated/Loader';
 import Input from '@/shared/ui/deprecated/Input';
-import { HStack, VStack } from '@/shared/ui/deprecated/Stack';
+import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 
 interface ProfileCardProps {
     className?: string;

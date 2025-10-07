@@ -4,7 +4,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import Text, { TextSize } from '@/shared/ui/deprecated/Text';
 import { ArticleList } from '@/entities/Article';
 import { useArticleRecommendationsList } from '../../api/articleRecommendationsApi';
-import { VStack } from '@/shared/ui/deprecated/Stack';
+import { VStack } from '@/shared/ui/redesigned/Stack';
 
 interface ArticleRecomendationsListProps {
     className?: string;

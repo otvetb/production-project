@@ -10,7 +10,7 @@ import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
 import Input from '@/shared/ui/deprecated/Input';
 import { Drawer } from '@/shared/ui/deprecated/Drawer';
 import Modal from '@/shared/ui/deprecated/Modal';
-import { VStack, HStack } from '@/shared/ui/deprecated/Stack';
+import { VStack, HStack } from '@/shared/ui/redesigned/Stack';
 
 interface RatingCardProps {
     className?: string;
