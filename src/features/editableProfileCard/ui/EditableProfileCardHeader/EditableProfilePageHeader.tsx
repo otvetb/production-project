@@ -2,16 +2,16 @@ import { FC, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import Text from '@/shared/ui/Text';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
+import Text from '@/shared/ui/deprecated/Text';
+import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
 
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getUserAuthData } from '@/entities/User';
-import { HStack } from '@/shared/ui/Stack';
 import { getProfileData } from '../../model/selectors/getProfileData/getProfileData';
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
 import { updateProfileData } from '../../model/services/updateProfileData/updateProfileData';
 import { profileActions } from '../../model/slice/profileSlice';
+import { HStack } from '@/shared/ui/deprecated/Stack';
 
 interface EditableProfilePageHeaderProps {
     className?: string;
