@@ -46,7 +46,7 @@ export const Icon = (props: IconProps) => {
                 className={cls.button}
                 // eslint-disable-next-line react/destructuring-assignment
                 onClick={props.onClick}
-                style={{ width, height }}
+                style={{ height, width }}
             >
                 {icon}
             </button>
