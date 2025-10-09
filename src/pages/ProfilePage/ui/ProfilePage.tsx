@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Page } from '@/widgets/Page';
 import { EditableProfileCard } from '@/features/editableProfileCard';
-import { ProfileRating } from '@/features/ProfileRating';
 import { VStack } from '@/shared/ui/redesigned/Stack';
 
 interface ProfilePageProps {
@@ -25,7 +24,7 @@ const ProfilePage = memo((props: ProfilePageProps) => {
         >
             <VStack gap="16" max>
                 <EditableProfileCard id={id} />
-                <ProfileRating profileId={id} />
+                {/* <ProfileRating profileId={id} /> */}
             </VStack>
         </Page>
     );
