@@ -1,3 +1,14 @@
+.ArticleListItemRedesigned {
+    &.BIG {
+        width: 100%;
+    }
+
+    &.SMALL {
+        width: 240px;
+        height: 350px;
+    }
+}
+
 .BIG {
     .views {
         margin-left: auto;
