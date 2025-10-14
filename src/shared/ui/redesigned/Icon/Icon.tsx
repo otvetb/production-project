@@ -31,7 +31,7 @@ export const Icon = (props: IconProps) => {
 
     const icon = (
         <Svg
-            className={classNames(cls.Icon, {}, [className])}
+            className={classNames(cls.Icon, {}, [])}
             width={width}
             height={height}
             {...otherProps}
@@ -43,7 +43,7 @@ export const Icon = (props: IconProps) => {
         return (
             <button
                 type="button"
-                className={cls.button}
+                className={classNames(cls.button, {}, [className])}
                 // eslint-disable-next-line react/destructuring-assignment
                 onClick={props.onClick}
                 style={{ height, width }}
