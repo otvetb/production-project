@@ -1,5 +1,4 @@
 import { memo, ReactNode, useCallback, useEffect } from 'react';
-import { Portal } from '@headlessui/react';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 
 import cls from './Drawer.module.scss';
@@ -9,6 +8,8 @@ import {
     useAnimationLibs,
     AnimationProvider,
 } from '@/shared/lib/components/AnimationProvider';
+import { Portal } from '../Portal';
+import { toggleFeatures } from '@/shared/lib/features';
 
 interface DrawerProps {
     className?: string;
@@ -17,11 +18,6 @@ interface DrawerProps {
     onClose?: () => void;
     lazy?: boolean;
 }
-
-/**
- * Устарел, используем новые компоненты из папки redesigned
- * @deprecated
- */
 
 export const DrawerContent = memo((props: DrawerProps) => {
     const { className, children, isOpen, onClose } = props;
@@ -88,12 +84,17 @@ export const DrawerContent = memo((props: DrawerProps) => {
     };
 
     return (
-        <Portal>
+        <Portal element={document.getElementById('app') ?? document.body}>
             <div
                 className={classNames(cls.Drawer, mods, [
                     className,
                     theme,
                     'app_drawer',
+                    toggleFeatures({
+                        name: 'isAppRedesigned',
+                        on: () => cls.drawerNew,
+                        off: () => cls.drawerOld,
+                    }),
                 ])}
             >
                 <Overlay onClick={() => close()} />

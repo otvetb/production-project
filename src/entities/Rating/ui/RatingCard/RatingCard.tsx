@@ -8,9 +8,9 @@ import { StarRating } from '@/shared/ui/deprecated/StarRating';
 
 import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
 import Input from '@/shared/ui/deprecated/Input';
-import { Drawer } from '@/shared/ui/deprecated/Drawer';
-import Modal from '@/shared/ui/deprecated/Modal';
 import { VStack, HStack } from '@/shared/ui/redesigned/Stack';
+import { Drawer } from '@/shared/ui/redesigned/Drawer';
+import Modal from '@/shared/ui/redesigned/Modal';
 
 interface RatingCardProps {
     className?: string;
