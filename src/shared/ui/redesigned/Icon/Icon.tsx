@@ -1,3 +1,4 @@
+import React, { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Icon.module.scss';
 
@@ -12,14 +13,14 @@ interface NonClickableIconProps extends IconBaseProps {
     clickable?: false;
 }
 
-interface ClickableIconProps extends IconBaseProps {
+interface ClickableBaseProps extends IconBaseProps {
     clickable: true;
-    onClick?: () => void;
+    onClick: () => void;
 }
 
-type IconProps = NonClickableIconProps | ClickableIconProps;
+type IconProps = NonClickableIconProps | ClickableBaseProps;
 
-export const Icon = (props: IconProps) => {
+export const Icon = memo((props: IconProps) => {
     const {
         className,
         Svg,
@@ -31,7 +32,7 @@ export const Icon = (props: IconProps) => {
 
     const icon = (
         <Svg
-            className={classNames(cls.Icon, {}, [])}
+            className={classNames(cls.Icon, {}, [className])}
             width={width}
             height={height}
             {...otherProps}
@@ -43,8 +44,7 @@ export const Icon = (props: IconProps) => {
         return (
             <button
                 type="button"
-                className={classNames(cls.button, {}, [className])}
-                // eslint-disable-next-line react/destructuring-assignment
+                className={cls.button}
                 onClick={props.onClick}
                 style={{ height, width }}
             >
@@ -54,4 +54,4 @@ export const Icon = (props: IconProps) => {
     }
 
     return icon;
-};
+});

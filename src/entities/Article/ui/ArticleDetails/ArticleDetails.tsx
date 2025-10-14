@@ -11,6 +11,7 @@ import TextDeprecated, {
     TextSize,
 } from '@/shared/ui/deprecated/Text';
 import { Skeleton as SkeletonDeprecated } from '@/shared/ui/deprecated/Skeleton';
+import { Skeleton as SkeletonRedesigned } from '@/shared/ui/redesigned/Skeleton';
 import { Avatar as AvatarDeprecated } from '@/shared/ui/deprecated/Avatar';
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
 import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg';
@@ -25,10 +26,9 @@ import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
 import { Icon as IconDeprecated } from '@/shared/ui/deprecated/Icon';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { renderBlock } from './renderBlock';
-import { ToggleFeatures } from '@/shared/lib/features';
+import { toggleFeatures, ToggleFeatures } from '@/shared/lib/features';
 import Text from '@/shared/ui/redesigned/Text';
 import { AppImage } from '@/shared/ui/redesigned/AppImage';
-import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
 
 interface ArticleDetailsProps {
     className?: string;
@@ -38,6 +38,12 @@ interface ArticleDetailsProps {
 const reducers: ReducersList = {
     articleDetails: articleDetailsReducer,
 };
+
+const Skeleton = toggleFeatures({
+    name: 'isAppRedesigned',
+    on: () => SkeletonRedesigned,
+    off: () => SkeletonDeprecated,
+});
 
 const Deprecated = () => {
     const article = useSelector(getArticleDetailsData);
@@ -80,7 +86,11 @@ const Redesigned = () => {
             <Text title={article?.subtitle} />
             <AppImage
                 fallback={
-                    <Skeleton width="100%" height={420} borderRadius="16px" />
+                    <SkeletonRedesigned
+                        width="100%"
+                        height={420}
+                        borderRadius="16px"
+                    />
                 }
                 src={article?.img}
                 className={cls.img}
@@ -109,32 +119,16 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     if (isLoading) {
         content = (
             <>
-                <SkeletonDeprecated
+                <Skeleton
                     className={cls.avatar}
                     width={200}
                     height={200}
                     borderRadius="50%"
                 />
-                <SkeletonDeprecated
-                    className={cls.title}
-                    width={300}
-                    height={32}
-                />
-                <SkeletonDeprecated
-                    className={cls.skeleton}
-                    width={600}
-                    height={24}
-                />
-                <SkeletonDeprecated
-                    className={cls.skeleton}
-                    width="100%"
-                    height={200}
-                />
-                <SkeletonDeprecated
-                    className={cls.skeleton}
-                    width="100%"
-                    height={200}
-                />
+                <Skeleton className={cls.title} width={300} height={32} />
+                <Skeleton className={cls.skeleton} width={600} height={24} />
+                <Skeleton className={cls.skeleton} width="100%" height={200} />
+                <Skeleton className={cls.skeleton} width="100%" height={200} />
             </>
         );
     } else if (error) {

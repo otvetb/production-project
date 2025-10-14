@@ -697,6 +697,12 @@
       "userId": "1",
       "text": "[s[s[s",
       "id": "QtMuRAc"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "",
+      "id": "2R8MfF5"
     }
   ],
   "users": [
@@ -714,7 +720,7 @@
         "isAppRedesigned": true
       },
       "jsonSettings": {
-        "theme": "app_light_theme",
+        "theme": "app_dark_theme",
         "isArticlesPageWasOpened": true
       }
     },
@@ -839,6 +845,13 @@
       "rate": 2,
       "feedback": "",
       "id": "S0IGtqx"
+    },
+    {
+      "articleId": "11",
+      "userId": "1",
+      "rate": 4,
+      "feedback": "",
+      "id": "y0tEwnG"
     }
   ],
   "profile-ratings": [

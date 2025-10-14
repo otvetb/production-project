@@ -1,5 +1,5 @@
 .Button {
-    padding: 8px 16px;
+    padding: 6px 16px;
     color: var(--text-redesigned);
     cursor: pointer;
     display: flex;
@@ -7,6 +7,7 @@
 
     &:hover:not(.disabled) {
         color: var(--accent-redesigned);
+        border: 2px solid var(--accent-redesigned);
 
         .addonLeft svg,
         .addonRight svg {
@@ -35,11 +36,11 @@
 
 .outline {
     background: none;
-    border: 1px solid var(--icon-redesigned);
+    border: 2px solid var(--icon-redesigned);
     border-radius: 34px;
 
     &hover {
-        border: 1px solid var(--accent-redesigned);
+        border: 2px solid var(--accent-redesigned);
     }
 }
 
