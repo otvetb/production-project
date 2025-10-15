@@ -1,4 +1,9 @@
-import React, { ButtonHTMLAttributes, memo, ReactNode } from 'react';
+import React, {
+    ButtonHTMLAttributes,
+    ForwardedRef,
+    forwardRef,
+    ReactNode,
+} from 'react';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
 
@@ -20,43 +25,48 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     color?: ButtonColor;
 }
 
-export const Button = memo((props: ButtonProps) => {
-    const {
-        className,
-        children,
-        variant = 'outline',
-        square,
-        disabled,
-        fullWidth,
-        size = 'm',
-        addonLeft,
-        addonRight,
-        color = 'normal',
-        ...otherProps
-    } = props;
+export const Button = forwardRef(
+    (props: ButtonProps, ref: ForwardedRef<HTMLButtonElement>) => {
+        const {
+            className,
+            children,
+            variant = 'outline',
+            square,
+            disabled,
+            fullWidth,
+            size = 'm',
+            addonLeft,
+            addonRight,
+            color = 'normal',
+            ...otherProps
+        } = props;
 
-    const mods: Mods = {
-        [cls.square]: square,
-        [cls.disabled]: disabled,
-        [cls.fullWidth]: fullWidth,
-        [cls.withAddon]: Boolean(addonLeft || addonRight),
-    };
+        const mods: Mods = {
+            [cls.square]: square,
+            [cls.disabled]: disabled,
+            [cls.fullWidth]: fullWidth,
+            [cls.withAddon]: Boolean(addonLeft || addonRight),
+        };
 
-    return (
-        <button
-            type="button"
-            className={classNames(cls.Button, mods, [
-                className,
-                cls[variant],
-                cls[size],
-                cls[color],
-            ])}
-            disabled={disabled}
-            {...otherProps}
-        >
-            {addonLeft && <div className={cls.addonLeft}>{addonLeft}</div>}
-            {children}
-            {addonRight && <div className={cls.addonRight}>{addonRight}</div>}
-        </button>
-    );
-});
+        return (
+            <button
+                type="button"
+                className={classNames(cls.Button, mods, [
+                    className,
+                    cls[variant],
+                    cls[size],
+                    cls[color],
+                ])}
+                disabled={disabled}
+                {...otherProps}
+                ref={ref}
+            >
+                {addonLeft && <div className={cls.addonLeft}>{addonLeft}</div>}
+                {children}
+                {addonRight && (
+                    <div className={cls.addonRight}>{addonRight}</div>
+                )}
+            </button>
+        );
+    },
+);
