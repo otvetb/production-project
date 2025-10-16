@@ -4,6 +4,7 @@
 
 .normal {
     background: var(--dark-bg-redesigned);
+    border-radius: 12px;
 }
 
 .light {
@@ -36,10 +37,6 @@
 
 .gap_24 {
     padding: 24px;
-}
-
-.normal {
-    border-radius: 12px;
 }
 
 .round {

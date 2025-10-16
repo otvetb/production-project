@@ -1,9 +1,14 @@
+.addonLeft svg,
+.addonRight svg {
+    color: var(--hint-redesigned);
+}
+
 .Button {
+    display: flex;
+    align-items: center;
     padding: 6px 16px;
     color: var(--text-redesigned);
     cursor: pointer;
-    display: flex;
-    align-items: center;
 
     &:hover:not(.disabled) {
         color: var(--accent-redesigned);
@@ -29,8 +34,8 @@
 .filled {
     background: var(--light-bg-redesigned);
     border: none;
-    outline: none;
     border-radius: 34px;
+    outline: none;
 }
 
 .outline {
@@ -90,16 +95,11 @@
     opacity: 0.5;
 }
 
-.fullWidth {
-    width: 100%;
-}
-
 .addonLeft,
 .addonRight {
     display: flex;
 }
-.addonLeft svg,
-.addonRight svg {
-    color: var(--hint-redesigned);
-}
 
+.fullWidth {
+    width: 100%;
+}

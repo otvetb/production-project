@@ -3,9 +3,9 @@
 }
 
 .menu {
+    overflow: hidden;
     background: var(--dark-bg-redesigned);
     border: 1px solid var(--accent-redesigned);
-    overflow: hidden;
 }
 
 .active {
