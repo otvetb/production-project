@@ -18,7 +18,7 @@ const Template: ComponentStory<typeof ProfileCard> = (args) => (
     <ProfileCard {...args} />
 );
 
-const avatar = '/storybook.jpg';
+const avatar = 'storybook.jpg';
 
 const primaryArgs = {
     data: {
