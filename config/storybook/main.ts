@@ -20,6 +20,7 @@ export default {
     core: {
         builder: 'webpack5',
     },
+    staticDirs: ['../../src/shared/assets/tests'],
     webpackFinal: async (config: Configuration) => {
         const paths = {
             build: '',
@@ -30,6 +31,7 @@ export default {
             buildLocales: '',
         };
         config!.resolve!.modules!.push(paths.src);
+
         config!.resolve!.extensions!.push('.ts', '.tsx');
         config!.resolve!.alias = {
             ...config!.resolve!.alias,
