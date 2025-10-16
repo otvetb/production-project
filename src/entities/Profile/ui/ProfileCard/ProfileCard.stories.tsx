@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import avatar from '@/shared/assets/tests/storybook.jpg';
+// import avatar from '@/shared/assets/tests/storybook.jpg';
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
 import { ProfileCard } from './ProfileCard';
@@ -17,6 +17,8 @@ export default {
 const Template: ComponentStory<typeof ProfileCard> = (args) => (
     <ProfileCard {...args} />
 );
+
+const avatar = '/storybook.jpg';
 
 const primaryArgs = {
     data: {

@@ -20,7 +20,7 @@ export default {
     core: {
         builder: 'webpack5',
     },
-    staticDirs: ['../../src/shared/assets/tests'],
+    staticDirs: ['../../public'],
     webpackFinal: async (config: Configuration) => {
         const paths = {
             build: '',
