@@ -18,7 +18,7 @@ export function ForceUpdateProvider({ children }: { children: ReactNode }) {
         setValue((prev) => !prev);
         setTimeout(() => {
             setValue((prev) => !prev);
-        }, 0);
+        }, 300);
     };
 
     const valueContext = useMemo(() => {
