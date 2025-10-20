@@ -4,6 +4,7 @@ import { Profile } from '@/entities/Profile';
 import { getProfileForm } from '../../selectors/getProfileForm/getProfileForm';
 import { validateProfileData } from '../validateProfileData/validateProfileData';
 import { ValidateProfileError } from '../../consts/consts';
+import { getUserAuthData, User } from '@/entities/User';
 
 export const updateProfileData = createAsyncThunk<
     Profile,
@@ -13,6 +14,8 @@ export const updateProfileData = createAsyncThunk<
     const { extra, rejectWithValue, getState } = thunkAPI;
 
     const formData = getProfileForm(getState());
+
+    const authData = getUserAuthData(getState());
 
     const errors = validateProfileData(formData);
 
@@ -26,7 +29,12 @@ export const updateProfileData = createAsyncThunk<
             formData,
         );
 
-        if (!response.data) {
+        const response2 = await extra.api.patch<User>(
+            `/users/${formData?.id}`,
+            { ...authData, avatar: formData?.avatar },
+        );
+
+        if (!response.data || !response2.data) {
             throw new Error();
         }
 

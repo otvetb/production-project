@@ -703,6 +703,12 @@
       "userId": "1",
       "text": "",
       "id": "2R8MfF5"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "очень круто",
+      "id": "U8Ko29a"
     }
   ],
   "users": [
@@ -717,7 +723,7 @@
       "features": {
         "isArticleRatingEnabled": true,
         "isCounterEnabled": true,
-        "isAppRedesigned": false
+        "isAppRedesigned": true
       },
       "jsonSettings": {
         "theme": "app_dark_theme"
@@ -730,7 +736,7 @@
       "roles": [
         "USER"
       ],
-      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNFGrj2426rkxudd7vQj-Ojn8GE7LHUuqlrQ&s",
       "features": {
         "isArticleRatingEnabled": false,
         "isCounterEnabled": false,
@@ -771,8 +777,8 @@
   "profile": [
     {
       "id": "1",
-      "firstname": "fafasfa",
-      "lastname": "asfewrsggsd",
+      "firstname": "admin",
+      "lastname": "admin",
       "age": 465,
       "currency": "USD",
       "country": "Belarus",
@@ -782,14 +788,14 @@
     },
     {
       "id": "2",
-      "firstname": "ivan",
+      "firstname": "ivanfasfas",
       "lastname": "asf",
       "age": 465,
-      "currency": "RUB",
-      "country": "Russia",
+      "currency": "USD",
+      "country": "Belarus",
       "city": "Moscow",
       "username": "pro_ivan",
-      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNFGrj2426rkxudd7vQj-Ojn8GE7LHUuqlrQ&s"
     },
     {
       "id": "4",
@@ -852,6 +858,20 @@
       "rate": 4,
       "feedback": "",
       "id": "y0tEwnG"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "rate": 4,
+      "feedback": "хахаха",
+      "id": "d1Xnrzs"
+    },
+    {
+      "articleId": "3",
+      "userId": "2",
+      "rate": 1,
+      "feedback": "фу",
+      "id": "U9tBH9N"
     }
   ],
   "profile-ratings": [
